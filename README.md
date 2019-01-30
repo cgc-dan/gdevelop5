@@ -1,4 +1,4 @@
 # GDevelop5
-**Game Development
+**Game Development**
 
 Graphic resources, test, demos and projects using **GDevelop5** 
