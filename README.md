@@ -1,6 +1,6 @@
 [![cgc-dan.github.io](https://raw.githubusercontent.com/cgc-dan/gdevelop5/master/assets/header.jpg)](https://cgc-dan.github.io/gdevelop5/)
 
-# cgc-dan.github.io
+# cgc-dan.github.io/gdevelop5/
 **For Game Development**
 
 Graphic resources, test, demos and projects using GDevelop5
@@ -49,7 +49,7 @@ Graphic resources, test, demos and projects using GDevelop5
 
 
 
-#Online#
+## Online
 * [Home page](https://cgc-dan.github.io/gdevelop5/)
 * [Info page](https://cgc-dan.github.io/gdevelop5/info.html)
 * [Site map](https://cgc-dan.github.io/gdevelop5/sitemap.html)
