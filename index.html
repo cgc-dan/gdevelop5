@@ -2,86 +2,233 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>CGC - Game Development</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CGC - Project</title>
 <style>
-.xcr::-webkit-scrollbar {width:8px;}
-.xcr::-webkit-scrollbar-track {-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);-webkit-border-radius:10px;border-radius:10px;}
-.xcr::-webkit-scrollbar-thumb {-webkit-border-radius:10px;border-radius:10px;background:#dfbd74;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);}
-.xcr::-webkit-scrollbar-thumb:window-inactive {background:rgba(204,0,0,.4);border:1px solid #033;}
-* {box-sizing:border-box;}
 html {scroll-behavior: smooth;}
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-5-half {width: 47.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-    border: 0px solid #ccc;
-}
-[class*="no"] {
-    float: left;
-    padding: 0;}
-[class*="padd20"]{display:block;padding:20px;}
-.row:after {
-    content: "";
-    clear: both;
-    display: block;
-}
-.hr{border:none; clear:both; height:1px; line-height:0; width:100%; font-size:0; padding:0 ;margin-bottom :20px;background:#F39;box-shadow:0 0px 3px #fff;}
-.left {text-align:left;}
-.right {text-align:right;}
-.center {text-align:center;}
-.fleft {float:left;}
-.fright {float:right;}
-.clear {clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0;}
-.dotted {border-bottom:1px dashed #FC3;border-left:0;border-right:0;margin-bottom:10px;}
+body{margin:0 auto;width:90%;background-color:#f1f1f1;color:#666;font-family:sans-serif;}
 
-body{margin:0 auto;width:90%;font-family:sans-serif;background-color:#f1f1f1;}
-.bg-white{background-color:#fff;}
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
+.xcr::-webkit-scrollbar {width:8px;}.xcr::-webkit-scrollbar-track {-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);-webkit-border-radius:10px;border-radius:10px;}.xcr::-webkit-scrollbar-thumb {-webkit-border-radius:10px;border-radius:10px;background:#fb89ff;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);}.xcr::-webkit-scrollbar-thumb:window-inactive {background:rgba(204,0,0,.4);border:1px solid #333;}* {box-sizing: border-box;}html{}* {box-sizing:border-box;}.line::after {content: "";clear: both;display: inline-table;}[class*="cl-"] {float: left;padding: 15px;border: 0px solid red;}.cl-1 {width: 8.33%;}.cl-2 {width: 16.66%;}.cl-3 {width: 25%;}.cl-4 {width: 33.33%;}.cl-5 {width: 41.66%;}.cl-6 {width: 50%;}.cl-7 {width: 58.33%;}.cl-8 {width: 66.66%;}.cl-9 {width: 75%;}.cl-10 {width: 83.33%;}.cl-11 {width: 91.66%;}.cl-12 {width: 100%;}.no{padding:0;}.tleft {text-align:left;}.tright {text-align:right;}.tcenter {text-align:center;}.tfleft {float:left;}.tfright {float:right;}.imgresp img, img.imgresp{display:block;width:100%;height:auto;margin:0 auto;}
+.divider{opacity:0;}
+a, a:visited{color:#09F;text-decoration:none;}
+a:hover{color:#F90;text-decoration:none;}
+
+.clmenu ul {width:100%;list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color:#324756;position:relative;top:0;left:0;z-index:10000;}.clmenu li {float: left;}.clmenu li a {display: block;color:#ccc;text-align: center;padding: 20px 19px;text-decoration: none;font-size:13px;text-transform:uppercase;}.clmenu li a:hover:not(.active) {color:#ffffff;background-color:rgba(0,0,0,0.70);}.clmenu .active {background-color:#627284;color:#ffffff;}.clmenu .active:hover{background-color:#324756;color:#ffffff;}.clmenu .flright{float:right;color:#ffffff;}.brand p{color:#FFF;padding-left:12px;padding-right:22px;}
+.desktop-only, .md p{display:block;}
+.md img{display:none;}
+
+#main{background-color:#fff;-webkit-box-shadow:3px 1px 8px #999,-3px 1px 8px #999;box-shadow:3px 1px 8px #999,-3px 1px 8px #999;}
+
+.gtitle {border:2px solid #f1f1f1;}
+.gtitle:hover {-webkit-box-shadow:0 3px 6px -4px #999;box-shadow:0 3px 6px -4px #999;}
+.gtitle img{opacity:.7;background-color:#09F;}
+.gtitle:hover img{opacity:1;}
+
+li a.smicon:before{content:'';display:block;width:30px;height:20px;float:left;background-image:url('assets/sitemap.png');background-repeat:no-repeat;background-size:20px 20px;background-position:0 0;margin-left:-5px;margin-top:-3px;opacity:0.5;}
+li a:hover.smicon:before{content:'';display:block;width:30px;height:20px;float:left;background-image:url('assets/sitemap.png');background-repeat:no-repeat;background-size:20px 20px;background-position:0 0;margin-left:-5px;margin-top:-3px;opacity:1;}
+
+
+span.smicon:before{content:'';display:block;width:30px;height:20px;float:left;background-image:url('assets/sitemap.png');background-repeat:no-repeat;background-size:20px 20px;background-position:0 0;margin-left:-5px;margin-top:-3px;margin-right:-25px;opacity:0.5;}
+span.smicon:hover:before{content:'';display:block;width:30px;height:20px;float:left;background-image:url('assets/sitemap.png');background-repeat:no-repeat;background-size:20px 20px;background-position:0 0;margin-left:-5px;margin-top:-3px;margin-right:-25px;opacity:1;}
+.crd{display:block;width:140px;height:auto;float:none;clear:left;box-sizing:border-box;margin:5px auto 3px auto;font-size:12px;text-transform:uppercase;}
+.mmargin{margin-top:80px;margin-bottom:63px;}
+.mmargin{background-color:#CFE7E7;}
+.authors{background-color:#fff;-webkit-border-radius:6px;border-radius:6px;-webkit-box-shadow:0 4px 2px -4px #999;box-shadow:0 4px 2px -4px #999;-webkit-transition:all .3s;transition:all .3s;}
+.authors:hover{-webkit-border-radius:6px;border-radius:6px;-webkit-box-shadow:0 7px 3px -3px #999;box-shadow:0 7px 3px -3px #999;}
+.banners #show{height:0px;opacity:0;overflow:hidden;-webkit-transition:all .4s;transition:all .4s;}
+.banners #show:target{height:auto;opacity:1;}
+
+.dbox{background-color:#EAF9FD;-webkit-border-radius:3px;border-radius:3px;margin:7px auto;}
+.footer{background-color:#324756;color:#ACB5BF;-webkit-box-shadow:3px 1px 8px #999,-3px 1px 8px #999;box-shadow:3px 1px 8px #999,-3px 1px 8px #999;}
+.footer p,.credits p{color:#ACB5BF;}
+.credits p{color:#ACB5BF;font-size:12px;}
+@media only screen and (max-width: 728px){body{font-size:13px;color:#666;font-family: sans-serif;}[class*="cl-"]{width:100%;}[class*="cl-"]{width:100%;}.clmenu ul {width:100%;list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #333;position:relative;}.clmenu li {float: none;clear:left}.clmenu li a {display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none;}.clmenu li a:hover:not(.active) {background-color: #111;}.clmenu .active {background-color:#06C}.clmenu .active:hover{background-color:#96C;}.clmenu .flright{float:none;clear:right}.md p{display:none;}.md img{display:block;width:140px;height:auto;margin:10px auto 12px auto;background-color:#f1f1f1;-webkit-border-radius:100%;border-radius:100%;}h1, h2,h3, h4,h5,h6{display:block;line-height:normal;font-size:18px;}.desktop-only{display:none;}}
+*{text-decoration:none;box-sizing:border-box;}
+* html .line {height:1%;}
 </style>
 </head>
 
 <body>
 
+<div id="main" class="cl-12 no line">
 
-<div class="header">
-  <h1>CGC GD</h1>
+<div class="cl-12 no clmenu">
+  <div class="cl-12 no tcenter imgresp desktop-only"><img src="assets/header.jpg" alt="CGC Dan"/></div>
+  <ul>
+  <li class="brand md">
+  <p>GD - Project</p>
+   <img src="assets/lgo.png" alt="CGC"/>
+  </li>
+<li><a href="#info">About - Info</a></li>
+  <li class="flright"><a class="active smicon" href="sitemap.html" target="_blank" rel="noopener">Site Map</a></li>
+</ul>
 </div>
 
 
-<div class="row bg-white">
 
-  <div class="col-12">
-  <p>Game development using GD5 game engine</p>
+
+
+
+
+
+
+
+<div id="texture" class="cl-12 line">
+
+<div class="cl-12 tcenter">
+    <h1>Categories</h1>
+</div>
+
+<div class="cl-4">
+   <div class="cl-12 imgresp tcenter gtitle">
+     <a href="page/texture-grass.html"><img src="assets/thumb-grass-texture.jpg" alt="grass tile-texture"/></a>
+   </div>
+</div>
+
+
+<div class="cl-4">
+   <div class="cl-12 imgresp tcenter gtitle">
+     <a href="page/texture-wood.html"><img src="assets/thumb-wood-texture.jpg" alt="wood tile-texture"/></a>
+   </div>
+</div>
+
+
+<div class="cl-4">
+   <div class="cl-12 imgresp tcenter gtitle">
+     <a href="page/texture-stone.html"><img src="assets/thumb-stone-texture.jpg" alt="stone tile-texture"/></a>
+   </div>
+</div>
+
+<div class="cl-4">
+   <div class="cl-12 imgresp tcenter gtitle">
+     <a href="page/texture-metal.html"><img src="assets/thumb-metal-texture.jpg" alt="metal tile-texture"/></a>
+   </div>
+</div>
+
+<div class="cl-4">
+   <div class="cl-12 imgresp tcenter gtitle">
+     <a href="page/texture-sky.html"><img src="assets/thumb-sky-texture.jpg" alt="sky tile-texture"/></a>
+   </div>
+</div>
+
+
+<div class="cl-4">
+   <div class="cl-12 imgresp tcenter gtitle">
+     <a href="page/texture-objects.html"><img src="assets/thumb-tools.jpg" alt="objects"/></a>
+   </div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div id="info" class="cl-12">
+  <div class="cl-12 dbox">
+           <div class="cl-1 tleft no"><img src="assets/en.png" alt="EN"/></div>
+            <div class="cl-11">
+            <p>Due to the fact that I've just started to "play" with <strong>GDevelop</strong>, most of the content is graphic-based.</p>
+            <p>You can browse and download: textures, sprites, animation, objects, tiles, platforms, and even a mini map for your own game project</p>
+            <p>I'm not into <strong>8bit</strong> graphics and artwork (aka pixel-art), (not yet) so, less of them but yea, they will have a place around here</p>
+            <p>This material is hosted on GitHub platform allowing you to contribute with your own stuff too</p>
+            </div>
   </div>
+  
+  
+  
+  <div class="cl-12 dbox">
+           <div class="cl-1 tleft no"><img src="assets/ro.png" alt="RO"/></div>
+            <div class="cl-11">
+            <p>Nu sunt prea familiarizat cu <strong>GDevelop</strong> dar asta nu ma impiedica sa incep cu ceva mai usor, partea grafica.</p>
+            <p>In acest context, de pe acest web site poti descarca in special imagini, elemente grafice</p>
+            <p>Web site pe platforma GitHub, poti contribui si tu cu materiale similare</p>
+            </div>
+  </div>
+  
+</div>
+
+
+<div class="cl-6 links">
+<p><strong>Useful links:</strong></p>
+   <ul>
+    <li>
+    <a href="https://gdevelop-app.com/" target="_blank">GDevelop5 - official website</a></li><li>
+    <a href="https://github.com/cgc-dan/gdevelop5/tree/download" target="_blank">GitHub repository of this project</a></li>
+   </ul>
+</div>
+
+<div class="cl-6 links">
+<p><strong>Contributors:</strong></p>
+    <ul>
+    <li><a href="#show">Show notable contributors</a></li>
+    </ul>
+</div>
+
+<div class="cl-12 banners no">
+<div class="cl-12 line mmargin">
+
+    <div id="show" class="cl-12 no">
+    <p class="close"><a href="#!show">&times;</a></p>
+    
+    
+    <div class="cl-3">
+    <div class="cl-12 authors imgresp no">
+    <img src="assets/mbanner.jpg"/>
+      <div class="cl-12">
+       <p>Contributor</p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="cl-3">
+    <div class="cl-12 authors imgresp no">
+    <img src="assets/mbanner.jpg"/>
+      <div class="cl-12">
+       <p>Contributor</p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="cl-3">
+    <div class="cl-12 authors imgresp no">
+    <img src="assets/mbanner.jpg"/>
+      <div class="cl-12">
+       <p>Contributor</p>
+      </div>
+    </div>
+    </div>
+    
+    
+     <div class="cl-3">
+    <div class="cl-12 authors imgresp no">
+    <img src="assets/mbanner.jpg"/>
+      <div class="cl-12">
+       <p>Contributor</p>
+      </div>
+    </div>
+    </div>
+    
+    
+</div>
+</div>
+</div>
 
 </div>
+
+
+
+
+<div class="cl-12 footer no">
+   <div class="cl-6"><p>free resources for GD game developers</p></div>
+   <div class="cl-6 tright"><p><a href="https://github.com/orgs/cgc-dan/people" target="_blank">contributor</a></p></div>
+   <div class="cl-12 tcenter credits no"><p class="crd"><span class="smicon"><a href="sitemap.html">Sitemap</a></span> | 2019</p></div>
+</div>
+
 
 
 

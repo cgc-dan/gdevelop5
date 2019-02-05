@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CGC - Project - Stone Texture</title>
+<style>
+html {scroll-behavior: smooth;}
+body{margin:0 auto;width:90%;background-color:#f1f1f1;color:#666;font-family:sans-serif;}
+
+.xcr::-webkit-scrollbar {width:8px;}.xcr::-webkit-scrollbar-track {-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);-webkit-border-radius:10px;border-radius:10px;}.xcr::-webkit-scrollbar-thumb {-webkit-border-radius:10px;border-radius:10px;background:#fb89ff;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);}.xcr::-webkit-scrollbar-thumb:window-inactive {background:rgba(204,0,0,.4);border:1px solid #333;}* {box-sizing: border-box;}html{}* {box-sizing:border-box;}.line::after {content: "";clear: both;display: inline-table;}[class*="cl-"] {float: left;padding: 15px;border: 0px solid red;}.cl-1 {width: 8.33%;}.cl-2 {width: 16.66%;}.cl-3 {width: 25%;}.cl-4 {width: 33.33%;}.cl-5 {width: 41.66%;}.cl-6 {width: 50%;}.cl-7 {width: 58.33%;}.cl-8 {width: 66.66%;}.cl-9 {width: 75%;}.cl-10 {width: 83.33%;}.cl-11 {width: 91.66%;}.cl-12 {width: 100%;}.no{padding:0;}.tleft {text-align:left;}.tright {text-align:right;}.tcenter {text-align:center;}.tfleft {float:left;}.tfright {float:right;}.imgresp img, img.imgresp{display:block;width:100%;height:auto;margin:0 auto;}
+.divider{opacity:0;}
+
+
+.clmenu ul {width:100%;list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color:#324756;position:fixed;top:0;left:0;z-index:10000;}.clmenu li {float: left;}.clmenu li a {display: block;color:#ccc;text-align: center;padding: 20px 19px;text-decoration: none;font-size:13px;text-transform:uppercase;}.clmenu li a:hover:not(.active) {color:#ffffff;background-color:rgba(0,0,0,0.70);}.clmenu .active {background-color:#627284;color:#ffffff;}.clmenu .active:hover{color:#ffffff;}.clmenu .flright{float:right;color:#ffffff;}.brand p{color:#FFF;padding-left:12px;padding-right:22px;}
+.desktop-only, .md p{display:block;}
+.md img{display:none;}
+
+#main{background-color:#fff;-webkit-box-shadow:3px 1px 8px #999,-3px 1px 8px #999;box-shadow:3px 1px 8px #999,-3px 1px 8px #999;margin-top:100px;}
+
+.gtitle {border:2px solid #f1f1f1;}
+.gtitle:hover {-webkit-box-shadow:0 3px 6px -4px #999;box-shadow:0 3px 6px -4px #999;}
+.gtitle img{opacity:.7;background-color:#09F;}
+.gtitle:hover img{opacity:1;}
+
+
+
+.stonepillar{height:100px;overflow:hidden;background-image: url('../resources/fence/stone/stone-wall_h01.png');background-repeat:repeat;}
+.stonepillar2{height:100px;overflow:hidden;background-image: url('../resources/fence/stone/stone-wall_h02.png');background-repeat:repeat;}
+.stonepillar3{height:100px;overflow:hidden;background-image: url('../resources/fence/stone/stone-wall_h03.png');background-repeat:repeat;}
+.stonepillar4{height:100px;overflow:hidden;background-image: url('../resources/fence/stone/stone-wall_h04.png');background-repeat:repeat;}
+
+.stonewall1{height:100px;overflow:hidden;background-image: url('../resources/fence/stone/stone-wall01.png');background-repeat:repeat;}
+.stonewall2{height:100px;overflow:hidden;background-image: url('../resources/fence/stone/stone-wall02.png');background-repeat:repeat;}
+.stonewall3{height:100px;overflow:hidden;background-image: url('../resources/fence/stone/stone-wall03.png');background-repeat:repeat;}
+.stonewall4{height:100px;overflow:hidden;background-image: url('../resources/fence/stone/stone-wall04.png');background-repeat:repeat;}
+
+.imgasitis img{display:block;width:25px;height:100px;margin:0 auto 12px auto;}
+
+
+.gtitle p{display:block;width:80%;height:auto;padding:5px 12px;font-size:15px;color:#f1f1f1;background-color:rgba(0,0,0,0.70);margin:8px auto 4px 2px;}
+.btn a,.btn a:visited{padding:1px 6px;text-align:center;margin-left:10px;font-size:13px;color:#fff;text-decoration:none;background-color:#09C;-webkit-border-radius:3px;border-radius:3px;}
+.btn a:hover{background-color:#F90;color:#000;text-decoration:none;}
+
+.button a,.button a:visited{padding:8px 22px;text-align:center;text-decoration:none;font-size:20px;color:#FFF;background-color:#09C;-webkit-border-radius:5px;border-radius:5px;border:2px solid #099;}
+.button a:hover{color:#fff;text-decoration:none;background-color:#096;border:2px solid #063}
+
+.stontexture1{height:150px;overflow:hidden;background-image: url('../resources/stone/stone09.png');background-repeat:repeat;}
+.stontexture2{height:150px;overflow:hidden;background-image: url('../resources/stone/stone010.png');background-repeat:repeat;}
+.stontexture3{height:150px;overflow:hidden;background-image: url('../resources/stone/stone011.png');background-repeat:repeat;}
+.stontexture4{height:150px;overflow:hidden;background-image: url('../resources/stone/stone012.png');background-repeat:repeat;}
+
+#animate{height:150px;background-repeat:no-repeat;background-size:auto;background-position:0 0;-webkit-animation: 2s 2s brake ease-in-out;animation: 2s 2s brake ease-in-out;animation-play-state: paused;background-image: url('../resources/fence/stone/stone-wall01.png');}
+#animate:target {height:150px;background-repeat:no-repeat;background-size:auto;background-position:0 0;-webkit-animation: 2s 2s brake infinite;animation: 2s 2s brake  infinite;}
+
+#animate2{height:150px;background-repeat:no-repeat;background-size:auto;background-position:0 0;-webkit-animation: 2s 2s brake ease-in-out;animation: 2s 2s brake ease-in-out;animation-play-state: paused;background-image: url('../resources/fence/stone/stone-wall_h02.png');}
+#animate2:target {height:150px;background-repeat:no-repeat;background-size:auto;background-position:0 0;-webkit-animation: 2s 2s brake2 infinite;animation: 2s 2s brake2  infinite;}
+
+
+
+
+.padd{margin:3px auto 30px auto;}
+
+@-webkit-keyframes brake {
+    0% {background-image:url('../resources/fence/stone/stone-wall01.png');}
+	50% {background-image: url('../resources/fence/stone/stone-wall04.png');}
+	75% {background-image: url('../resources/fence/stone/stone-wall02.png');}
+	100% {background-image: url('../resources/fence/stone/stone-wall03.png');}
+	}
+@keyframes brake {
+    0% {background-image:url('../resources/fence/stone/stone-wall01.png');}
+	50% {background-image: url('../resources/fence/stone/stone-wall04.png');}
+	75% {background-image: url('../resources/fence/stone/stone-wall02.png');}
+	100% {background-image: url('../resources/fence/stone/stone-wall03.png');}
+	}	
+	
+	
+@-webkit-keyframes brake2 {
+    0% {background-image: url('../resources/fence/stone/stone-wall_h02.png');}
+	50% {background-image: url('../resources/fence/stone/stone-wall_h03.png');}
+	75% {background-image: url('../resources/fence/stone/stone-wall_h04.png');}
+	100% {background-image: url('../resources/fence/stone/stone-wall_h02.png');}
+	}
+@keyframes brake2 {
+    0% {background-image: url('../resources/fence/stone/stone-wall_h02.png');}
+	50% {background-image: url('../resources/fence/stone/stone-wall_h03.png');}
+	75% {background-image: url('../resources/fence/stone/stone-wall_h04.png');}
+	100% {background-image: url('../resources/fence/stone/stone-wall_h02.png');}
+	}	
+
+a, a:visited{color:#09F;text-decoration:none;}
+a:hover{color:#F90;text-decoration:none;}
+.footer{background-color:#324756;color:#ACB5BF;-webkit-box-shadow:3px 1px 8px #999,-3px 1px 8px #999;box-shadow:3px 1px 8px #999,-3px 1px 8px #999;}
+.footer p,.credits p{color:#ACB5BF;}
+.credits p{color:#ACB5BF;font-size:12px;}
+
+@media only screen and (max-width: 728px){body{font-size:13px;color:#666;font-family:Verdana, Geneva, sans-serif;}[class*="cl-"]{width:100%;}[class*="cl-"]{width:100%;}.clmenu ul {width:100%;list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #333;position:relative;}.clmenu li {float: none;clear:left}.clmenu li a {display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none;}.clmenu li a:hover:not(.active) {background-color: #111;}.clmenu .active {background-color:#06C}.clmenu .active:hover{background-color:#96C;}.clmenu .flright{float:none;clear:right}.md p{display:none;}.md img{display:block;width:140px;height:auto;margin:10px auto 12px auto;background-color:#f1f1f1;-webkit-border-radius:100%;border-radius:100%;}.desktop-only{display:none;}}
+*{text-decoration:none;box-sizing:border-box;}
+* html .line {height:1%;}
+</style>
+</head>
+
+<body>
+
+
+<div class="cl-12 no clmenu">
+  <ul>
+  <li class="brand md">
+  <p>Stone</p>
+  </li>
+<li><a href="texture-grass.html">Grass</a></li>
+  <li><a href="texture-wood.html">Wood</a></li>
+  <li><a href="texture-stone.html" class="active">Stone</a></li>
+  <li><a href="texture-metal.html">Metal</a></li>
+  <li><a href="texture-sky.html">Sky</a></li>
+  <li><a href="texture-objects.html">Objects</a></li>
+  <li class="flright"><a href="https://cgc-dan.github.io/gdevelop5/" target="_blank" rel="noopener">CGC-GITHUB</a></li>
+</ul>
+</div>
+
+
+
+
+<div id="main" class="cl-12 no line">
+
+
+
+
+<div id="texture" class="cl-12 line">
+
+<div class="cl-12 tcenter">
+    <h1>Stone</h1>
+    <p>Can be used with GDevelop</p>
+</div>
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgasitis">
+     <img src="../resources/fence/stone/stone-wall_h01.png"/>
+     <div class="cl-12 no stonepillar">
+         <p>Stone - 29x100</p>
+     </div>
+   </div>
+</div>
+
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgasitis">
+     <img src="../resources/fence/stone/stone-wall_h02.png"/>
+     <div class="cl-12 no stonepillar2">
+         <p>Stone - 29x100</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgasitis">
+     <img src="../resources/fence/stone/stone-wall_h03.png"/>
+     <div class="cl-12 no stonepillar3">
+         <p>Stone - 29x100</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgasitis">
+     <img src="../resources/fence/stone/stone-wall_h04.png"/>
+     <div class="cl-12 no stonepillar4">
+         <p>Stone - 29x100</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-12 tcenter">
+    <h1>Stone Fence</h1>
+</div>
+
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle">
+     <img src="../resources/fence/stone/stone-wall01.png"/>
+     <div class="cl-12 no stonewall1">
+         <p>Stone - 150x100</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle">
+     <img src="../resources/fence/stone/stone-wall02.png"/>
+     <div class="cl-12 no stonewall2">
+         <p>Stone - 150x100</p>
+     </div>
+   </div>
+</div>
+
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle">
+     <img src="../resources/fence/stone/stone-wall03.png"/>
+     <div class="cl-12 no stonewall3">
+         <p>Stone - 150x100</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle">
+     <img src="../resources/fence/stone/stone-wall04.png"/>
+     <div class="cl-12 no stonewall4">
+         <p>Stone - 150x100</p>
+     </div>
+   </div>
+</div>
+
+<div id="fencebrake" class="cl-12 tcenter">
+    <h1>Stone animated</h1>
+    <p>using css to simulate GD sprite animation</p>
+</div>
+
+
+<div class="cl-6">
+   <div class="cl-12 tcenter gtitle">
+     
+     <div class="cl-12 no simulate">
+         <p class="btn">Simulate animation <a href="#animate">play</a> <a href="#!animate">stop</a></p>
+         <div id="animate" class="cl-12 tcenter">
+         </div>
+     </div>
+   </div>
+</div>
+
+
+<div class="cl-6">
+   <div class="cl-12 tcenter gtitle">
+     
+     <div class="cl-12 no simulate">
+         <p class="btn">Simulate animation <a href="#animate2">play</a> <a href="#!animate2">stop</a></p>
+         <div id="animate2" class="cl-12 tcenter">
+         </div>
+     </div>
+   </div>
+</div>
+
+
+
+
+</div>
+
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgresp">
+     <img src="../resources/stone/stone01.png">
+     <div class="cl-12">
+         <p>Stone - 150x100</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgresp">
+     <img src="../resources/stone/stone02.png">
+     <div class="cl-12">
+         <p>Stone - 150x100</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgresp">
+     <img src="../resources/stone/stone03.png">
+     <div class="cl-12">
+         <p>Stone - 150x100</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgresp">
+     <div class="cl padd"><img src="../resources/stone/stone04.png"></div>
+     <div class="cl-12">
+         <p>Stone - 150x78</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-12">&nbsp;</div>
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgresp">
+     <img src="../resources/stone/stone05.png">
+     <div class="cl-12">
+         <p>Stone - 150x100</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgresp">
+     <img src="../resources/stone/stone06.png">
+     <div class="cl-12">
+         <p>Stone - 150x100</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgresp">
+     <img src="../resources/stone/stone07.png">
+     <div class="cl-12">
+         <p>Stone - 150x100</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgresp">
+     <img src="../resources/stone/stone08.png">
+     <div class="cl-12">
+         <p>Stone - 150x100</p>
+     </div>
+   </div>
+</div>
+
+
+<div class="cl-12 tcenter">
+    <h1>Stone Texture</h1>
+</div>
+
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgresp">
+     <img src="../resources/stone/stone09.png">
+     <div class="cl-12 no stontexture1">
+         <p>Stone - 300x300</p>
+     </div>
+   </div>
+</div>
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgresp">
+     <img src="../resources/stone/stone010.png">
+     <div class="cl-12 no stontexture2">
+         <p>Stone - 300x300</p>
+     </div>
+   </div>
+</div>
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgresp">
+     <img src="../resources/stone/stone011.png">
+     <div class="cl-12 no stontexture3">
+         <p>Stone - 300x300</p>
+     </div>
+   </div>
+</div>
+<div class="cl-3">
+   <div class="cl-12 tcenter gtitle imgresp">
+     <img src="../resources/stone/stone012.png">
+     <div class="cl-12 no stontexture4">
+         <p>Stone - 300x300</p>
+     </div>
+   </div>
+</div>
+
+
+
+
+<div class="cl-12 tcenter button">
+<a href="https://github.com/cgc-dan/gdevelop5/releases/tag/v1.2" target="_blank">Download Pack</a>
+</div>
+
+
+
+
+
+</div>
+
+
+<div class="cl-12 footer no">
+   <div class="cl-6"><p>free resources for GD game developers</p></div>
+   <div class="cl-6 tright"><p><a href="https://github.com/orgs/cgc-dan/people" target="_blank">contributor</a></p></div>
+   <div class="cl-12 tcenter credits no"><p class="crd"><span class="smicon"><a href="../sitemap.html">Sitemap</a></span> | 2019</p></div>
+</div>
+
+
+</body>
+</html>

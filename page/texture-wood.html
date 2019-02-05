@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CGC - Project - Wood Texture</title>
+<style>
+html {scroll-behavior: smooth;}
+body{margin:0 auto;width:90%;background-color:#f1f1f1;color:#666;font-family:sans-serif;}
+
+.xcr::-webkit-scrollbar {width:8px;}.xcr::-webkit-scrollbar-track {-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);-webkit-border-radius:10px;border-radius:10px;}.xcr::-webkit-scrollbar-thumb {-webkit-border-radius:10px;border-radius:10px;background:#fb89ff;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);}.xcr::-webkit-scrollbar-thumb:window-inactive {background:rgba(204,0,0,.4);border:1px solid #333;}* {box-sizing: border-box;}html{}* {box-sizing:border-box;}.line::after {content: "";clear: both;display: inline-table;}[class*="cl-"] {float: left;padding: 15px;border: 0px solid red;}.cl-1 {width: 8.33%;}.cl-2 {width: 16.66%;}.cl-3 {width: 25%;}.cl-4 {width: 33.33%;}.cl-5 {width: 41.66%;}.cl-6 {width: 50%;}.cl-7 {width: 58.33%;}.cl-8 {width: 66.66%;}.cl-9 {width: 75%;}.cl-10 {width: 83.33%;}.cl-11 {width: 91.66%;}.cl-12 {width: 100%;}.no{padding:0;}.tleft {text-align:left;}.tright {text-align:right;}.tcenter {text-align:center;}.tfleft {float:left;}.tfright {float:right;}.imgresp img, img.imgresp{display:block;width:100%;height:auto;margin:0 auto;}
+.divider{opacity:0;}
+
+
+.clmenu ul {width:100%;list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color:#324756;position:fixed;top:0;left:0;z-index:10000;}.clmenu li {float: left;}.clmenu li a {display: block;color:#ccc;text-align: center;padding: 20px 19px;text-decoration: none;font-size:13px;text-transform:uppercase;}.clmenu li a:hover:not(.active) {color:#ffffff;background-color:rgba(0,0,0,0.70);}.clmenu .active {background-color:#627284;color:#ffffff;}.clmenu .active:hover{color:#ffffff;}.clmenu .flright{float:right;color:#ffffff;}.brand p{color:#FFF;padding-left:12px;padding-right:22px;}
+.desktop-only, .md p{display:block;}
+.md img{display:none;}
+
+#main{background-color:#fff;-webkit-box-shadow:3px 1px 8px #999,-3px 1px 8px #999;box-shadow:3px 1px 8px #999,-3px 1px 8px #999;margin-top:100px;}
+
+.gtitle {border:2px solid #f1f1f1;}
+.gtitle:hover {-webkit-box-shadow:0 3px 6px -4px #999;box-shadow:0 3px 6px -4px #999;}
+.gtitle img{opacity:.7;background-color:#09F;}
+.gtitle:hover img{opacity:1;}
+
+
+
+.tiledwood{height:100px;overflow:hidden;background-image: url('../resources/objects/wood-planks/tile-wood-plank01.png');background-repeat:repeat;}
+.tiledwood2{height:100px;overflow:hidden;background-image: url('../resources/objects/wood-planks/tile-wood-plank02.png');background-repeat:repeat;}
+.tiledwood3{height:100px;overflow:hidden;background-image: url('../resources/objects/wood-planks/tile-wood-plank03.png');background-repeat:repeat;}
+
+.tiledlog1{height:100px;overflow:hidden;background-image: url('../resources/objects/wood-planks/log01.png');background-repeat:repeat-x;}
+.tiledlog2{height:100px;overflow:hidden;background-image: url('../resources/objects/wood-planks/log2.png');background-repeat:repeat-x;}
+.tiledlog3{height:100px;overflow:hidden;background-image: url('../resources/objects/wood-planks/logs01.png');background-repeat:repeat-x;}
+
+.woodfence1{height:100px;overflow:hidden;background-image: url('../resources/fence/wood/fence01a.png');background-repeat:repeat-x;}
+.woodfence2{height:100px;overflow:hidden;background-image: url('../resources/fence/wood/fence04.png');background-repeat:repeat-x;}
+.woodfence3{height:100px;overflow:hidden;background-image: url('../resources/fence/wood/fence03.png');background-repeat:repeat-x;}
+.woodfence4{height:100px;overflow:hidden;background-image: url('../resources/fence/wood/fence01.png');background-repeat:repeat-x;}
+
+.imgasitis img{display:block;width:25px;height:100px;margin:0 auto 12px auto;}
+
+
+.gtitle p{display:block;width:80%;height:auto;padding:5px 12px;font-size:15px;color:#f1f1f1;background-color:rgba(0,0,0,0.70);margin:8px auto 4px 2px;}
+.btn a,.btn a:visited{padding:1px 6px;text-align:center;margin-left:10px;font-size:13px;color:#fff;text-decoration:none;background-color:#09C;-webkit-border-radius:3px;border-radius:3px;}
+.btn a:hover{background-color:#F90;color:#000;text-decoration:none;}
+
+.button a,.button a:visited{padding:8px 22px;text-align:center;text-decoration:none;font-size:20px;color:#FFF;background-color:#09C;-webkit-border-radius:5px;border-radius:5px;border:2px solid #099;}
+.button a:hover{color:#fff;text-decoration:none;background-color:#096;border:2px solid #063}
+
+
+
+
+#animate{height:150px;background-repeat:no-repeat;background-size:auto;background-position:0 0;-webkit-animation: 2s 2s brake ease-in-out;animation: 2s 2s brake ease-in-out;animation-play-state: paused;background-image: url('../resources/fence/wood/fence01a.png');}
+#animate:target {height:150px;background-repeat:no-repeat;background-size:auto;background-position:0 0;-webkit-animation: 1s 1s brake infinite;animation: 1s 1s brake  infinite;}
+
+@-webkit-keyframes brake {
+    0% {background-image:url('../resources/fence/wood/fence01a.png');}
+	15% {background-image: url('../resources/fence/wood/fence04.png');}
+	25% {background-image: url('../resources/fence/wood/fence03.png');}
+	50% {background-image: url('../resources/fence/wood/fence02.png');}
+	70% {background-image: url('../resources/fence/wood/fence03.png');}
+	85% {background-image: url('../resources/fence/wood/fence04.png');}
+	100% {background-image:url('../resources/fence/wood/fence01a.png');}
+	}
+@keyframes brake {
+    0% {background-image:url('../resources/fence/wood/fence01a.png');}
+	15% {background-image: url('../resources/fence/wood/fence04.png');}
+	25% {background-image: url('../resources/fence/wood/fence03.png');}
+	50% {background-image: url('../resources/fence/wood/fence02.png');}
+	70% {background-image: url('../resources/fence/wood/fence03.png');}
+	85% {background-image: url('../resources/fence/wood/fence04.png');}
+	100% {background-image:url('../resources/fence/wood/fence01a.png');}
+	}	
+	
+
+a, a:visited{color:#09F;text-decoration:none;}
+a:hover{color:#F90;text-decoration:none;}
+.footer{background-color:#324756;color:#ACB5BF;-webkit-box-shadow:3px 1px 8px #999,-3px 1px 8px #999;box-shadow:3px 1px 8px #999,-3px 1px 8px #999;}
+.footer p,.credits p{color:#ACB5BF;}
+.credits p{color:#ACB5BF;font-size:12px;}
+
+@media only screen and (max-width: 728px){body{font-size:13px;color:#666;font-family:Verdana, Geneva, sans-serif;}[class*="cl-"]{width:100%;}[class*="cl-"]{width:100%;}.clmenu ul {width:100%;list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #333;position:relative;}.clmenu li {float: none;clear:left}.clmenu li a {display: block;color: white;text-align: center;padding: 14px 16px;text-decoration: none;}.clmenu li a:hover:not(.active) {background-color: #111;}.clmenu .active {background-color:#06C}.clmenu .active:hover{background-color:#96C;}.clmenu .flright{float:none;clear:right}.md p{display:none;}.md img{display:block;width:140px;height:auto;margin:10px auto 12px auto;background-color:#f1f1f1;-webkit-border-radius:100%;border-radius:100%;}.desktop-only{display:none;}}
+*{text-decoration:none;box-sizing:border-box;}
+* html .line {height:1%;}
+</style>
+</head>
+
+<body>
+
+
+<div class="cl-12 no clmenu">
+  <ul>
+  <li class="brand md">
+  <p>Wood</p>
+  </li>
+<li><a href="texture-grass.html">Grass</a></li>
+  <li><a href="texture-wood.html" class="active">Wood</a></li>
+  <li><a href="texture-stone.html">Stone</a></li>
+  <li><a href="texture-metal.html">Metal</a></li>
+  <li><a href="texture-sky.html">Sky</a></li>
+  <li><a href="texture-objects.html">Objects</a></li>
+  <li class="flright"><a href="https://cgc-dan.github.io/gdevelop5/" target="_blank" rel="noopener">CGC-GITHUB</a></li>
+</ul>
+</div>
+
+
+
+
+
+<div id="main" class="cl-12 no line">
+
+
+
+<div id="texture" class="cl-12 line">
+
+<div class="cl-12 tcenter">
+    <h1>Texture - Tiles - Wood</h1>
+    <p>Can be used with GDevelop as "tiled sprite"</p>
+</div>
+
+<div class="cl-4">
+   <div class="cl-12 tcenter gtitle imgasitis">
+     <img src="../resources/objects/wood-planks/tile-wood-plank01.png"/>
+     <div class="cl-12 no tiledwood">
+         <p>Wood Plank - 25x100</p>
+     </div>
+   </div>
+</div>
+
+
+<div class="cl-4">
+   <div class="cl-12 tcenter gtitle imgasitis">
+     <img src="../resources/objects/wood-planks/tile-wood-plank02.png"/>
+     <div class="cl-12 no tiledwood2">
+         <p>Wood Plank - 25x100</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-4">
+   <div class="cl-12 tcenter gtitle imgasitis">
+     <img src="../resources/objects/wood-planks/tile-wood-plank03.png"/>
+     <div class="cl-12 no tiledwood3">
+         <p>Wood Plank - 25x100</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-12 tcenter">
+    <h1>Wood</h1>
+</div>
+
+
+<div class="cl-4">
+   <div class="cl-12 tcenter gtitle">
+     <img src="../resources/objects/wood-planks/log01.png"/>
+     <div class="cl-12 no tiledlog1">
+         <p>Log - 150x44</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-4">
+   <div class="cl-12 tcenter gtitle">
+     <img src="../resources/objects/wood-planks/log2.png"/>
+     <div class="cl-12 no tiledlog2">
+         <p>Log - 44x150</p>
+     </div>
+   </div>
+</div>
+
+
+<div class="cl-4">
+   <div class="cl-12 tcenter gtitle">
+     <img src="../resources/objects/wood-planks/logs01.png"/>
+     <div class="cl-12 no tiledlog3">
+         <p>Log - 44x150</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-12 tcenter">
+    <h1>Wood Fence</h1>
+</div>
+
+
+<div class="cl-4">
+   <div class="cl-12 tcenter gtitle">
+     <img src="../resources/fence/wood/fence01a.png"/>
+     <div class="cl-12 no woodfence1">
+         <p>Wood Fence - 25x100</p>
+     </div>
+   </div>
+</div>
+
+<div class="cl-4">
+   <div class="cl-12 tcenter gtitle">
+     <img src="../resources/fence/wood/fence04.png"/>
+     <div class="cl-12 no woodfence2">
+         <p>Wood Fence - 25x100</p>
+     </div>
+   </div>
+</div>
+
+
+
+<div class="cl-4">
+   <div class="cl-12 tcenter gtitle">
+     <img src="../resources/fence/wood/fence03.png"/>
+     <div class="cl-12 no woodfence3">
+         <p>Wood Fence - 25x100</p>
+     </div>
+   </div>
+</div>
+
+
+<div class="cl-4">
+   <div class="cl-12 tcenter gtitle">
+   
+     <div class="cl-3">
+     <img src="../resources/fence/wood/fence01a.png"/>
+     </div>
+     <div class="cl-3">
+     <img src="../resources/fence/wood/fence02.png"/>
+     </div>
+     <div class="cl-3">
+     <img src="../resources/fence/wood/fence03.png"/>
+     </div>
+     <div class="cl-3">
+     <img src="../resources/fence/wood/fence04.png"/>
+     </div>
+     
+     <div id="fencebrake" class="cl-12 no simulate">
+         <p class="btn">Simulate animation <a href="#animate">play</a> <a href="#!animate">stop</a></p>
+         <div id="animate" class="cl-12 tcenter">
+         </div>
+     </div>
+   </div>
+</div>
+
+
+<div class="cl-4">
+   <div class="cl-12 tcenter gtitle">
+     <img src="../resources/fence/wood/fence01.png"/>
+     <div class="cl-12 no woodfence4">
+         <p>Wood Fence - 150x100</p>
+     </div>
+   </div>
+</div>
+
+
+<div class="cl-2">
+   <div class="cl-12 tcenter gtitle">
+     <img src="../resources/fence/wood/fence-90deg.png"/>
+     <div class="cl-12">
+         <p>90&deg; - R - 11x100</p>
+     </div>
+   </div>
+</div>
+<div class="cl-2">
+   <div class="cl-12 tcenter gtitle">
+     <img src="../resources/fence/wood/fence-90adeg.png"/>
+     <div class="cl-12">
+         <p>90&deg; - L - 11x100</p>
+     </div>
+   </div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="cl-12 tcenter button">
+<a href="https://github.com/cgc-dan/gdevelop5/releases/tag/v1.1" target="_blank">Download Pack</a>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+<div class="cl-12 footer no">
+   <div class="cl-6"><p>free resources for GD game developers</p></div>
+   <div class="cl-6 tright"><p><a href="https://github.com/orgs/cgc-dan/people" target="_blank">contributor</a></p></div>
+   <div class="cl-12 tcenter credits no"><p class="crd"><span class="smicon"><a href="../sitemap.html">Sitemap</a></span> | 2019</p></div>
+</div>
+
+
+</body>
+</html>
