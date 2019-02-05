@@ -1,4 +1,4 @@
-Thank you for downloading this pack.
+
 Resources were created to be used with GDevelop game engine
 
 
