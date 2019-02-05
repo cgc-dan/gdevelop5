@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>forest-map</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+body{width:100%;margin:0 auto;}
+* {box-sizing: border-box;}
+html {scroll-behavior: smooth;}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-5-half {width: 47.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 0px solid #ccc;
+}
+[class*="no"] {
+    float: left;
+    padding: 0;}
+[class*="padd20"]{display:block;padding:20px;}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.hr{border:none; clear:both; height:1px; line-height:0; width:100%; font-size:0; padding:0 ;margin-bottom :20px;background:#F39;box-shadow:0 0px 3px #fff;}
+.left {text-align:left;}
+.right {text-align:right;}
+.center {text-align:center;}
+.fleft {float:left;}
+.fright {float:right;}
+.clear {clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0;}
+.dotted {border-bottom:1px dashed #FC3;border-left:0;border-right:0;margin-bottom:10px;}
+#main{font-family:sans-serif;font-size:14px;}
+.imgresp img{display:block;width:100%;height:auto;margin:0 auto;}
+
+.dinfo{position:fixed;top: 5%;right:1%;background-color:rgba(0,0,0,.70);color:#fff;}
+.tab #infobox{display:block;}
+.tab #infobox:target{display:none;}
+
+.tab #infoboxshow{display:none;}
+.tab #infoboxshow:target{display:block;}
+
+.close a, .close a:visited{font-size:19px;color:#fff;background-color:#09C;text-decoration:none;padding:3px 7px 4px; text-align:center;}
+.close a:hover{background-color:#F36;color:#fff;text-decoration:none;}
+.show{position:fixed;top: 5%;right:1%;}
+.small a,.small a:visited,.small a:hover{font-size:13px;-webkit-border-radius:4px;border-radius:4px;}
+
+.clearfix:after {clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0;}
+
+* html .clearfix {height:1%;}
+</style>
+</head>
+
+<body>
+<div class="col-2 right show close"><a href="#infoboxshow">&equiv;</a></div>
+
+<div id="main" class="col-12 no">
+<div class="row">
+
+<div class="col-6 no imgresp"><img src="forest_01.jpg" alt="map1"></div>
+<div class="col-6 no imgresp"><img src="forest_02.jpg" alt="map2"></div>
+<div class="col-6 no imgresp"><img src="forest_03.jpg" alt="map3"></div>
+<div class="col-6 no imgresp"><img src="forest_04.jpg" alt="map4"></div>
+
+</div>
+
+
+<div class="tab">
+<div id="infoboxshow">
+<div id="infobox" class="col-6 dinfo no">
+  <div class="col-10">
+    <p>4 tile jpeg (500x500) images composing a forest map with dusty forest-road</p>
+   <p>Made using Photoshop and a few textures also available for download</p>
+   <p>Suitable for GD isometric game as mini map</p>
+   <p class="close small"><a href="../../../page/texture-grass.html">&laquo; Go Back</a></p>
+   </div>
+<div class="col-2 right close"><a href="#infobox">&times;</a></div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
